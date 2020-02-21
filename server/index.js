@@ -38,12 +38,16 @@ const handleRequest = function(req, res) {
   }
 
   // TODO: GET ONE
-  if ((req.url == '/quote/' || req.url == '/quote') && req.method == "FILL ME IN") {
+  if ((req.url == '/quote/' || req.url == '/quote') && req.method == "GET") {
     //YOUR CODE HERE
+    let random = getRandomInt(0, (quotes.length-1));
+    console.log(random);
 
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end(quotes[random])
   }
   // TODO: POST/CREATE
-  else if ((req.url == 'FILL ME IN' || req.url == 'FILL ME IN') && req.method == "FILL ME IN") {
+  else if ((req.url == '/quote/' || req.url == '/quote/') && req.method == "POST") {
     //YOUR CODE HERE
   }
 

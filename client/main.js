@@ -11,9 +11,18 @@ $(document).ready(function() {
   });
 
   function getQuote(){
-
-    //YOUR CODE HERE, Add a GET request
-
+    $.ajax({
+      url: 'http://127.0.0.1:3000/',
+      type: 'GET',
+      data: '',
+      success: function(quote){
+        console.log('we did it!')
+        console.log(quote);
+      },
+      error: function() {
+        console.error('Failed to fetch messages');
+      }
+    });
   }
 
   function addQuote(quote){
