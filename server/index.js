@@ -12,11 +12,12 @@ const port = 3000;
 
 // TODO: Fill with strings of your favorite quotes :)
 const quotes = [
-  'one',
-  'two',
-  'three',
-  'four',
-  'five'
+  '"You have no responsibility to live up to what other people think you ought to accomplish. I have no responsibility to be like they expect me to be. It\'s their mistake, not my failing." -Richard Feyman',
+  '"Specialization is for insects.” -Robert Anson Heinlein',
+  '“A society grows great when old men plant trees in whose shade they know they shall never sit in” -Greek Proverb',
+  '“For me, it is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring.” -Carl Sagan',
+  '“One reason we rush so quickly to the vulgar satisfactions of judgment, and love to revel in our righteous outrage, is that it spares us from the impotent pain of empathy, and the harder, messier work of understanding.” -Tim Kreider',
+  '“I urge you to please notice when you are happy, and exclaim or murmur or think at some point, "If this isn\'t nice, I don\'t know what is.” -Kurt Vonnegut'
 ];
 
 //Utility Function to return a random integer
