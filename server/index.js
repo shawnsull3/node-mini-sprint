@@ -41,14 +41,17 @@ const handleRequest = function(req, res) {
   if ((req.url == '/quote/' || req.url == '/quote') && req.method == "GET") {
     //YOUR CODE HERE
     let random = getRandomInt(0, (quotes.length-1));
-    console.log(random);
 
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.writeHead(200, {...headers, 'Content-Type': 'text/plain' });
     res.end(quotes[random])
   }
   // TODO: POST/CREATE
-  else if ((req.url == '/quote/' || req.url == '/quote/') && req.method == "POST") {
-    //YOUR CODE HERE
+  else if ((req.url == '/quote/' || req.url == '/quote') && (req.method == "POST" || req.method == 'OPTIONS') ){
+    console.log(req._onPendingdata);
+    // quotes.push(quote);
+    
+    res.writeHead(200, {...headers});
+    res.end()
   }
 
 //CATCH ALL ROUTE

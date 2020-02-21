@@ -16,8 +16,7 @@ $(document).ready(function() {
       type: 'GET',
       data: '',
       success: function(quote){
-        console.log('we did it!')
-        console.log(quote);
+        $(".quote").text(quote)
       },
       error: function() {
         console.error('Failed to fetch messages');
@@ -26,8 +25,18 @@ $(document).ready(function() {
   }
 
   function addQuote(quote){
-    
-    //YOUR CODE HERE, Add a POST request
+    $.ajax({
+      url: 'http://127.0.0.1:3000/quote',
+      type: 'POST',
+      data: JSON.stringify(quote),
+      contentType: 'application/json',
+      success: function(){
+        console.log('we diiddddd ittttt')
+      },
+      error: function() {
+        console.error('Failed to fetch messages');
+      }
+    });
 
   }
 });
