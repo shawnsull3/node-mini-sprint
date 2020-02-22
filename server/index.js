@@ -61,7 +61,6 @@ const handleRequest = function(req, res) {
   else {
     res.writeHead(404,headers);
     res.end('Page not found');
-
   }
 }
 
