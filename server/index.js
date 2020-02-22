@@ -47,9 +47,12 @@ const handleRequest = function(req, res) {
   }
   // TODO: POST/CREATE
   else if ((req.url == '/quote/' || req.url == '/quote') && (req.method == "POST" || req.method == 'OPTIONS') ){
-    console.log(req._onPendingdata);
-    // quotes.push(quote);
-    
+    req.on('data', (val) => {
+      let body = '' + val;
+    })
+
+    quotes.push(body);
+
     res.writeHead(200, {...headers});
     res.end()
   }
